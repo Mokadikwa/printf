@@ -66,6 +66,12 @@ int _printf(const char *format, ...)
 				{
 					print_char('%', &count);
 				}
+				else if (*format == 'd' || *format == 'i')
+				{
+					int d = va_arg(args, int);
+					_printf("%d", d);
+					count++;
+				}
 		}
 		else
 		{
