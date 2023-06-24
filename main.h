@@ -1,11 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#define MINUS 1
-#define PLUS 2
-#define ZERO 4
-#define HASH 8
-#define SPACE 16
+#define MINUS (1 << 0)
+#define PLUS (1 << 1)
+#define ZERO (1 << 2)
+#define HASH (1 << 3)
+#define SPACE (1 << 4)
 
 #include <stdio.h>
 #include <stdarg.h>
