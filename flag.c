@@ -13,12 +13,12 @@ int flags(const char *format, int *x)
 	const char C[] = {'-', '+', '0', '#', ' ', '\0'};
 	const int NAMES[] = {MINUS, PLUS, ZERO, HASH, SPACE, 0};
 
-	for (valid_i = *i + 1; format[valid_i] != '\0'; valid_i++)
+	for (valid_i = *x + 1; format[valid_i] != '\0'; valid_i++)
 	{
 		for (w = 0; C[w] != '\0'; w++)
 			if (format[valid_i] == C[w])
 			{
-				initial |= NAME[w];
+				initial |= NAMES[w];
 				break;
 			}
 
@@ -26,7 +26,7 @@ int flags(const char *format, int *x)
 			break;
 	}
 
-	*i = valid_i - 1;
+	*x = valid_i - 1;
 
 	return (initial);
 }
