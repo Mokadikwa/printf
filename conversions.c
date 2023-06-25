@@ -8,37 +8,30 @@
 
 void print_decimal(int num, int *count)
 {
-	int digits = 0;
-	int temp = num;
-
+	int digit;
+	int reversed = 0;
 	if (num == 0)
 	{
 		_putchar('0');
-	}
-	else if (num < 0)
-	{
-		_putchar('-');
 		(*count)++;
-
+		return;
+	}
+	if (num < 0)
+	{
+		_putchar(('-'));
+		(*count)++;
 		num = -num;
 	}
-	while (temp != 0)
+	while (num > 0)
 	{
-		temp /= 10;
-		digits++;
+		reversed = (reversed * 10) + (num % 10);
+		num /= 10;
 	}
-	while (digits > 0)
+	while (reversed > 0)
 	{
-		int divisor = 1;
-		int i;
-
-		for (i = 1; i < digits; i++)
-			divisor *= 10;
-
-		_putchar((num / divisor) + '0');
+		digit = reversed % 10;
+		_putchar(digit + '0');
 		(*count)++;
-
-		num %= divisor;
-		digits--;
+		reversed /= 10;
 	}
 }
