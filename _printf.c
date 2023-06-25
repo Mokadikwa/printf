@@ -29,6 +29,8 @@ void print_string(char *s, int *count)
 		s++;
 		(*count)++;
 	}
+	if (*s == NULL)
+		return (-1);
 }
 
 /**
@@ -48,7 +50,7 @@ int _printf(const char *format, ...)
 	while (*format != '\0')
 	{
 		if (*format == '%')
-		{
+			{
 				format++;
 				if (*format == 'c')
 				{
@@ -69,9 +71,10 @@ int _printf(const char *format, ...)
 				else if (*format == 'd' || *format == 'i')
 				{
 					int num = va_arg(args, int);
+
 					print_decimal(num, &count);
 				}
-		}
+			}
 		else
 		{
 			print_char(*format, &count);
