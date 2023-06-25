@@ -8,37 +8,37 @@
 
 void print_decimal(int num, int *count)
 {
-	int digits = 0;
+	int digit = 0;
 	int temp = num;
 
 	if (num == 0)
 	{
 		_putchar('0');
+		(*count)++;
 	}
 	else if (num < 0)
 	{
 		_putchar('-');
 		(*count)++;
-
 		num = -num;
 	}
 	while (temp != 0)
 	{
 		temp /= 10;
-		digits++;
+		digit++;
 	}
-	while (digits > 0)
+	while (digit > 0)
 	{
 		int divisor = 1;
 		int i;
 
-		for (i = 1; i < digits; i++)
+		for (i = 1; i < digit; i++)
 			divisor *= 10;
 
 		_putchar((num / divisor) + '0');
 		(*count)++;
 
 		num %= divisor;
-		digits--;
+		digit--;
 	}
 }
