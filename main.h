@@ -1,6 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#ifndef _PUTCHAR_H
+#define _PUTCHAR_H
+#endif
+
 #define MINUS (1 << 0)
 #define PLUS (1 << 1)
 #define ZERO (1 << 2)
@@ -15,5 +19,6 @@ int _printf(const char *format, ...);
 void print_char(int c, int* count);
 void print_string(char* s, int* count);
 int flag(const char *format, int *x);
+int _putchar(char c);
 
 #endif
