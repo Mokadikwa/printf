@@ -20,5 +20,6 @@ void print_char(int c, int* count);
 void print_string(char* s, int* count);
 int flag(const char *format, int *x);
 int _putchar(char c);
+void print_decimal(int num, int *count);
 
 #endif
