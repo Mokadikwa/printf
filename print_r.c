@@ -3,7 +3,7 @@
  * print_r - prints reverse order of strings
  * @list:list that increments
  *
- * Return:number of characters to be printed
+ *i Return:number of characters to be printed
  */
 int print_r(va_list list)
 {
@@ -11,7 +11,7 @@ int print_r(va_list list)
 	int x, y;
 
 	if (c == NULL)
-		c = ")llun(";
+		c = ")LLUN(";
 	x = 0;
 	while (c[i])
 	{
