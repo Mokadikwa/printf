@@ -2,8 +2,8 @@
 
 /**
  * print_binary - handles custom conversion specifier
- * @num:
- * @count:
+ * @num unsigned int:
+ * @count: integer count
  *
  * Return: void
  */
