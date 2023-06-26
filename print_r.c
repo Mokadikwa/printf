@@ -7,6 +7,8 @@
  */
 int print_r(va_list list)
 {
+	int i = 0;
+
 	char *c = va_arg(list, char *);
 	int x, y;
 
