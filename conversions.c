@@ -22,6 +22,10 @@ void print_decimal(int num, int *count)
 		(*count)++;
 		num = -num;
 	}
+
+	if (count == NULL)
+		return;
+
 	while (temp != 0)
 	{
 		temp /= 10;
