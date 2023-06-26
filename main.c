@@ -1,37 +1,41 @@
+#include <stdio.h>
 #include "main.h"
 
-
-int main()
+int main(void)
 {
-    int count;
+	int len = 0;
+	int len2 = 0;
+	
+	len = _printf("A %s sentence\n", "simple");
+	len2 = printf("A %s sentence\n", "simple");
+	printf("Len:[%d]\n", len);
+	printf("Len1:[%d]\n\n", len2);
+	
+	len = _printf("A %c%c%s sentence\n", 's', 'i', "mple");
+	len2 = printf("A %c%c%s sentence\n", 's', 'i', "mple");
+	printf("Len:[%d]\n", len);
+	printf("Len1:[%d]\n\n", len2);
 
-    printf("Test Case 1:\n");
-    count = _printf("Hello, World!\n");
-    printf("Number of characters printed: %d\n", count);
+	len = _printf("A simple %5 entence\n");
+	len2 = printf("A simple %5 entence\n");
+	printf("Len:[%d]\n", len);
+	printf("Len1:[%d]\n\n", len2);
 
-    printf("\nTest Case 2:\n");
-    count = _printf("This is a test string.\n");
-    printf("Number of characters printed: %d\n", count);
+	len = _printf("Percentage: %%\n");
+	len2 = printf("Percentage: %%\n");
+	printf("Len:[%d]\n", len);
+	printf("Len1:[%d]\n\n", len2);
 
-    printf("\nTest Case 3:\n");
-    count = _printf("The character is: %c\n", 'A');
-    printf("Number of characters printed: %d\n", count);
+	len = _printf("%");
+	len2 = printf("%");
+	printf("Len:[%d]\n", len);
+	printf("Len1:[%d]\n\n", len2);
 
-    printf("\nTest Case 4:\n");
-    count = _printf("The string is: %s\n", "Test");
-    printf("Number of characters printed: %d\n", count);
+	len = _printf("A simple sentence%");
+	len2 = printf("\nA simple sentence%");
+	printf("\nLen:[%d]\n", len);
+	printf("Len1:[%d]\n\n", len2);	
 
-    printf("\nTest Case 5:\n");
-    count = _printf("The percentage sign: %%\n");
-    printf("Number of characters printed: %d\n", count);
-
-    printf("\nTest Case 6:\n");
-    count = _printf("The decimal number is: %d\n", 12345);
-    printf("Number of characters printed: %d\n", count);
-
-    printf("\nTest Case 7:\n");
-    count = _printf("The decimal number is: %i\n", -6789);
-    printf("Number of characters printed: %d\n", count);
-
-    return 0;
+	return (0);
 }
+

@@ -14,6 +14,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <limits.h>
+#include <stdlib.h>
+
+void print_binary(unsigned int num, int *count);
 int _printf(const char *format, ...);
 void print_char(int c, int* count);
 void print_string(char* s, int* count);
