@@ -23,9 +23,6 @@ void print_char(int c, int *count)
  */
 void print_string(char *s, int *count)
 {
-	if (s == NULL)
-		return;
-
 	while (*s != '\0')
 	{
 		_putchar(*s);
