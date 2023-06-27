@@ -24,4 +24,5 @@ int flag(const char *format, int *x);
 int _putchar(char c);
 void print_decimal(int num, int *count);
 int print_r(va_list list);
+void handle_conversion_specifier(unsigned int value, char specifier);
 #endif /* MAIN_H */
