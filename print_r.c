@@ -13,12 +13,12 @@ int print_r(va_list list)
 	int x;
 
 	if (c == NULL)
-		c = "(NULL)";
+		c =")LLUN(";
+
 	x = 0;
+
 	while (c[x])
-	{
 		x++;
-	}
 	x--;
 	for (; x >= 0; x--)
 	{

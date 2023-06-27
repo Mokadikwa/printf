@@ -39,6 +39,9 @@ void print_decimal(int num, int *count)
 		for (i = 1; i < digit; i++)
 			divisor *= 10;
 
+		if (divisor == 0)
+			return;
+
 		_putchar((num / divisor) + '0');
 		(*count)++;
 
