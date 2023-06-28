@@ -3,24 +3,26 @@
  * print_r - prints reverse order of strings
  * @list:list that increments
  *
- *i Return:number of characters to be printed
+ * Return:number of characters to be printed
  */
 int print_r(va_list list)
 {
+	int y = 0;
+
 	char *c = va_arg(list, char *);
-	int x, y;
+	int x;
 
 	if (c == NULL)
-		c = ")LLUN(";
+		c =")LLUN(";
+
 	x = 0;
-	while (c[i])
-	{
+
+	while (c[x])
 		x++;
-	}
 	x--;
 	for (; x >= 0; x--)
 	{
-		_putchar(c[i]);
+		_putchar(c[x]);
 		y++;
 	}
 	return (y);

@@ -23,14 +23,15 @@ void print_char(int c, int *count)
  */
 void print_string(char *s, int *count)
 {
+	if (s == NULL)
+		return;
+
 	while (*s != '\0')
 	{
 		_putchar(*s);
 		s++;
 		(*count)++;
 	}
-	if (*s == NULL)
-		return (-1);
 }
 
 /**
@@ -52,7 +53,12 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 			{
 				format++;
-				if (*format == 'c')
+				if (*format == 'b')
+				{
+					unsigned int num = va_arg(args, unsigned int);
+					print_binary(num, &count);
+				}
+				else if (*format == 'c')
 				{
 					int c = va_arg(args, int);
 
