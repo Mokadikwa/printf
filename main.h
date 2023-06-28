@@ -31,6 +31,7 @@ int print_r(va_list list);
 unsigned int len_num(unsigned int num, int base);
 int string_reverse(char *r);
 char *hexadecimal_num(int num);
+int print_octal(va_list list);
 
 #endif
 =======
